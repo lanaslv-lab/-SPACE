@@ -1,0 +1,109 @@
+<!doctype html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>&team • Home</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Iceberg&family=Anta:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="logo">T</div>
+        <div class="brand-text">
+          <span class="brand-name">&team</span>
+          <span class="brand-sub">fansite independente</span>
+        </div>
+      </a>
+
+```
+  <nav class="main-nav" aria-label="Navegação principal">
+    <button id="btnToggle" class="nav-toggle" aria-expanded="false">☰</button>
+    <ul id="navList" class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="lore.html">Lore / História</a></li>
+      <li><a href="membros.html">Membros</a></li>
+      <li><a href="discografia.html">Discografia / MVs</a></li>
+      <li><a href="premios.html">Prêmios</a></li>
+    </ul>
+  </nav>
+</div>
+```
+
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Bem-vindo ao fansite oficial não-oficial de <span class="accent">&team</span></h1>
+        <p class="lead">Notícias, fotos, lore e toda a vibe do grupo num só lugar — feito por fãs, pra fãs.</p>
+        <p class="cta-row">
+          <a class="btn primary" href="membros.html">Ver membros</a>
+          <a class="btn ghost" href="discografia.html">Ouvir / Assistir</a>
+        </p>
+      </div>
+      <div class="hero-right card">
+        <img src="images/group.jpg" alt="Foto do grupo &team" class="hero-image">
+        <div class="card-row">
+          <div>
+            <strong>Próximo Comeback</strong>
+            <div class="muted">Data: --/--/----</div>
+          </div>
+          <a class="btn small" href="discografia.html">Linha do tempo</a>
+        </div>
+      </div>
+    </section>
+
+```
+<section class="section highlights">
+  <h2>Destaques</h2>
+  <div class="grid grid-3">
+    <article class="card">
+      <h3 class="title-small">Última Entrevista</h3>
+      <p class="muted">Resumo rápido e link pro vídeo.</p>
+    </article>
+    <article class="card">
+      <h3 class="title-small">Fotos Recentes</h3>
+      <p class="muted">Galeria com photoshoots e fanpics selecionadas.</p>
+    </article>
+    <article class="card">
+      <h3 class="title-small">Lore em Destaque</h3>
+      <p class="muted">Entradas da história oficial e teorias.</p>
+    </article>
+  </div>
+</section>
+```
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <strong>&team Fansite</strong>
+        <div class="muted">Não oficial • Use conteúdo oficial com créditos</div>
+      </div>
+      <div class="footer-right">
+        <nav>
+          <a href="#">YouTube</a> · <a href="#">Instagram</a> · <a href="#">X / Twitter</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('btnToggle');
+    const nav = document.getElementById('navList');
+    btn && btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      nav.style.display = nav.style.display === 'block' ? '' : 'block';
+    });
+  </script>
+
+</body>
+</html>

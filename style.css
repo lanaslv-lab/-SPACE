@@ -1,0 +1,96 @@
+/* style.css - tema amarelo + cinza, Iceberg para títulos, Anta para texto */
+:root{
+--bg:#0f0f10;
+--panel:#111216;
+--yellow:#ffd54f;
+--yellow-2:#ffb84d;
+--gray-1:#bfc3c7;
+--muted:#9aa0a6;
+--accent:var(--yellow);
+--radius:12px;
+--container:1100px;
+}
+
+/* reset simples */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0;
+font-family: 'Anta', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+background: linear-gradient(180deg,#070708 0%, #0f0f10 100%);
+color:#eaeef0;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:var(--container);margin:0 auto;padding:1.25rem}
+
+/* header */
+.site-header{background:transparent;padding:.8rem 0;position:sticky;top:0;z-index:20}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{display:flex;align-items:center;gap:.8rem;text-decoration:none;color:inherit}
+.logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--yellow),var(--yellow-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#111}
+.brand-name{display:block;font-weight:800;font-family:'Iceberg',sans-serif;font-size:1.1rem}
+.brand-sub{display:block;color:var(--muted);font-size:.85rem}
+
+/* nav */
+.main-nav{position:relative}
+.nav-toggle{display:none;background:transparent;border:0;color:inherit;font-size:1.2rem}
+.nav-list{display:flex;gap:.5rem;list-style:none;margin:0;padding:0}
+.nav-list a{text-decoration:none;color:var(--gray-1);padding:.45rem .7rem;border-radius:8px;font-weight:600}
+.nav-list a:hover{background:rgba(255,255,255,0.03);color:var(--accent)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 420px;gap:1.25rem;align-items:start;margin-top:1rem}
+.hero-left h1{font-family:'Iceberg',sans-serif;font-size:2.1rem;margin:0 0 .4rem;color:var(--yellow)}
+.lead{color:var(--muted);margin-top:0}
+.cta-row{margin-top:1rem}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;text-decoration:none;font-weight:700}
+.btn.primary{background:linear-gradient(90deg,var(--yellow),var(--yellow-2));color:#111}
+.btn.ghost{border:1px solid rgba(255,255,255,0.04);color:var(--gray-1);background:transparent}
+.btn.small{padding:.35rem .6rem;font-size:.9rem}
+
+/* cards */
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1rem;border-radius:var(--radius);box-shadow:0 8px 18px rgba(2,6,23,0.6)}
+.hero-image{width:100%;height:220px;object-fit:cover;border-radius:8px}
+.card-row{display:flex;justify-content:space-between;align-items:center;margin-top:.6rem}
+
+/* grids */
+.grid{display:grid;gap:1rem}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3, .grid-2{margin-top:.8rem}
+
+/* membros */
+.members-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1rem}
+.member .avatar{width:100%;height:220px;object-fit:cover;border-radius:12px;box-shadow:0 8px 18px rgba(0,0,0,0.6)}
+.member h3{font-family:'Iceberg',sans-serif;margin:.6rem 0 0}
+
+/* tipografia */
+h1,h2,h3{font-family:'Iceberg',sans-serif;color:var(--yellow)}
+.title-small{font-size:1rem;margin:0 0 .4rem}
+.muted{color:var(--muted);font-size:.95rem}
+.lead{font-size:1.05rem}
+
+/* footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.03);margin-top:2rem;padding:1rem 0}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.site-footer nav a{color:var(--gray-1);text-decoration:none;margin-left:.6rem}
+
+/* timeline / lists */
+.timeline, .awards{list-style:none;padding:0;margin:0}
+.timeline li, .awards li{padding:.4rem 0;border-bottom:1px dashed rgba(255,255,255,0.02)}
+
+/* responsivo */
+@media (max-width:980px){
+.hero{grid-template-columns:1fr}
+.nav-toggle{display:block}
+.nav-list{display:none;position:absolute;right:0;top:44px;background:var(--panel);padding:.6rem;border-radius:8px;flex-direction:column;min-width:160px}
+.grid-3{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:600px){
+.grid-3{grid-template-columns:1fr}
+.brand-name{font-size:1rem}
+.logo{width:46px;height:46px}
+}
+::selection{background:var(--yellow);color:#111}
+::placeholder{color:rgba(255,255,255,0.35)}

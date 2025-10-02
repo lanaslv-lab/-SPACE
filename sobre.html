@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>&team • Sobre</title>
+  <link href="https://fonts.googleapis.com/css2?family=Iceberg&family=Anta:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="logo">T</div>
+        <div class="brand-text"><span class="brand-name">&team</span><span class="brand-sub">fansite</span></div>
+      </a>
+      <nav class="main-nav">
+        <button id="btnToggle2" class="nav-toggle" aria-expanded="false">☰</button>
+        <ul id="navList2" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="lore.html">Lore / História</a></li>
+          <li><a href="membros.html">Membros</a></li>
+          <li><a href="discografia.html">Discografia / MVs</a></li>
+          <li><a href="premios.html">Prêmios</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h1>Sobre &team</h1>
+      <div class="card">
+        <p class="muted">Resumo oficial: quando o grupo foi formado, agência (se quiser colocar), estilo musical e curadoria de imagem.</p>
+        <h3>Conceito</h3>
+        <p>Explique o conceito artístico, influências, e o que torna o grupo único.</p>
+        <h3>Linha do tempo</h3>
+        <ul class="timeline">
+          <li><strong>YYYY</strong> — Debut / Single de estreia</li>
+          <li><strong>YYYY</strong> — Primeiro álbum / primeiro prêmio</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <strong>&team Fansite</strong>
+        <div class="muted">Contato: fansite@email.com</div>
+      </div>
+      <div class="footer-right">
+        <nav><a href="#">YouTube</a> · <a href="#">Instagram</a> · <a href="#">X</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn2 = document.getElementById('btnToggle2');
+    const nav2 = document.getElementById('navList2');
+    btn2 && btn2.addEventListener('click', ()=> {
+      const expanded = btn2.getAttribute('aria-expanded') === 'true';
+      btn2.setAttribute('aria-expanded', String(!expanded));
+      nav2.style.display = nav2.style.display === 'block' ? '' : 'block';
+    });
+  </script>
+
+</body>
+</html>
